@@ -5,7 +5,7 @@ module.exports = {
 
   options: {
     autoImport: {
-      skipBabel: [{ package: 'mapbox-gl', semverRange: '*' }],
+      skipBabel: [{ package: 'maplibre-gl', semverRange: '*' }],
     },
 
     babel: {
@@ -18,10 +18,10 @@ module.exports = {
     this._super.included.apply(this, arguments);
 
     const path = require('path');
-    const mapboxPkg = require(require.resolve('mapbox-gl/package.json', {
+    const mapboxPkg = require(require.resolve('maplibre-gl/package.json', {
       paths: [app.project.root],
     }));
-    const stylesPath = require.resolve(`mapbox-gl/${mapboxPkg.style}`, {
+    const stylesPath = require.resolve(`maplibre-gl/${mapboxPkg.style}`, {
       paths: [app.project.root],
     });
 

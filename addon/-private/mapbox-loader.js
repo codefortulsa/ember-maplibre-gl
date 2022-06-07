@@ -36,7 +36,7 @@ export default EmberObject.extend({
     this._mapOptions = options;
     this._extOnMapLoaded = onMapLoaded;
 
-    import('mapbox-gl')
+    import('maplibre-gl')
       .then(bind(this, this._onModule))
       .then(bind(this, this._onMapLoaded))
       .then(bind(this, this._onComplete))
