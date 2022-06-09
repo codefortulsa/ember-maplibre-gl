@@ -22,11 +22,9 @@ module.exports = function (environment) {
       // when it is created
     },
 
-    'mapbox-gl': {
-      accessToken:
-        'pk.eyJ1Ijoia3R1cm5leSIsImEiOiJjajFudmQ2Z2owMDBiMnlyd3FtZDl2dDlkIn0.5uUKBumz-7IWM_2PQ6cXQw',
+    'maplibre-gl': {
       map: {
-        style: 'mapbox://styles/mapbox/streets-v9?optimize=true',
+        style: 'https://demotiles.maplibre.org/style.json',
       },
     },
   };

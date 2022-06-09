@@ -7,7 +7,7 @@ module.exports = function (deployTarget) {
 
     git: {
       enabled: true,
-      repo: 'https://github.com/kturney/ember-mapbox-gl.git',
+      repo: 'https://github.com/kturney/ember-maplibre-gl.git',
     },
   };
 

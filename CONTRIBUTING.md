@@ -2,8 +2,8 @@
 
 ## Installation
 
-* `git clone https://github.com/kturney/ember-mapbox-gl`
-* `cd ember-mapbox-gl`
+* `git clone https://github.com/kturney/ember-maplibre-gl`
+* `cd ember-maplibre-gl`
 * `yarn install`
 
 ## Linting

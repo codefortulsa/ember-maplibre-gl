@@ -1,0 +1,22 @@
+{{#if this._loader.isLoaded}}
+  {{yield
+    (hash
+      call=(component 'maplibre-gl-call' obj=this._loader.map)
+      control=(component 'maplibre-gl-control' map=this._loader.map)
+      image=(component 'maplibre-gl-image' map=this._loader.map)
+      layer=(component 'maplibre-gl-layer' map=this._loader.map)
+      marker=(component 'maplibre-gl-marker' map=this._loader.map maplibreGl=this._loader.maplibreGl)
+      on=(component 'maplibre-gl-on' eventSource=this._loader.map)
+      popup=(component 'maplibre-gl-popup' map=this._loader.map maplibreGl=this._loader.maplibreGl)
+      source=(component 'maplibre-gl-source' map=this._loader.map)
+      instance=this._loader.map
+    )
+  }}
+{{else if this._loader.error}}
+  {{#if (has-block 'inverse')}}
+    {{yield this._loader.error to='inverse'}}
+  {{else}}
+    {{! template-lint-disable no-log }}
+    {{log 'error rendering maplibre-gl' this._loader.error}}
+  {{/if}}
+{{/if}}

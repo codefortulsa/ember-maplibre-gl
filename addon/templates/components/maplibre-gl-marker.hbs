@@ -1,0 +1,7 @@
+{{#in-element this.domContent}}
+  {{yield
+    (hash
+      popup=(component 'maplibre-gl-popup' marker=this.marker maplibreGl=this.maplibreGl)
+    )
+  }}
+{{/in-element}}

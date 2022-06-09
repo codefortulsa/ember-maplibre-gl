@@ -18,10 +18,10 @@ module.exports = {
     this._super.included.apply(this, arguments);
 
     const path = require('path');
-    const mapboxPkg = require(require.resolve('maplibre-gl/package.json', {
+    const maplibrePkg = require(require.resolve('maplibre-gl/package.json', {
       paths: [app.project.root],
     }));
-    const stylesPath = require.resolve(`maplibre-gl/${mapboxPkg.style}`, {
+    const stylesPath = require.resolve(`maplibre-gl/${maplibrePkg.style}`, {
       paths: [app.project.root],
     });
 

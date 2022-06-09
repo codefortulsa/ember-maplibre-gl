@@ -1,11 +1,11 @@
 <DocsHero
   @logo='ember'
   @slimHeading='Ember'
-  @strongHeading='MapboxGL'
-  @byline='Fast, expressive MapboxGL maps'
+  @strongHeading='maplibreGL'
+  @byline='Fast, expressive maplibreGL maps'
 />
 
-<MapboxGl as |map|>
+<MaplibreGl as |map|>
   <map.source @options={{hash type='geojson' data=this.wanderDrone}} as |source|>
     <source.layer @layer={{hash type='symbol' layout=(hash icon-image='rocket-15')}} />
   </map.source>
@@ -21,4 +21,4 @@
   {{/if}}
 
   {{map.on 'click' this.onClick}}
-</MapboxGl>
+</MaplibreGl>

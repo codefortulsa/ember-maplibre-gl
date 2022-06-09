@@ -5,10 +5,10 @@
 Add the following map options to `config/environment.js` to style the map, set a default zoom level, and to provide a default centerpoint:
 
 ```javascript
-'mapbox-gl': {
+'maplibre-gl': {
   accessToken: 'ACCESS TOKEN HERE',
   map: {
-    style: 'mapbox://styles/mapbox/basic-v9',
+    style: 'maplibre://styles/maplibre/basic-v9',
     zoom: 13,
     center: [ -96.7969879, 32.7766642 ]
   }
@@ -38,7 +38,7 @@ export default Controller.extend({
 ```
 
 ```handlebars
-{{#mapbox-gl class='map-container' initOptions=(hash pitch=30) as |map|}}
+{{#maplibre-gl class='map-container' initOptions=(hash pitch=30) as |map|}}
   {{map.on 'click' (action 'mapClicked')}}
 
   {{#map.source options=(hash type='geojson' data=marker) as |source|}}
@@ -46,7 +46,7 @@ export default Controller.extend({
       type='circle'
       paint=(hash circle-color='#007cbf' circle-radius=10))}}
   {{/map.source}}
-{{/mapbox-gl}}
+{{/maplibre-gl}}
 ```
 
 The above example does the following:

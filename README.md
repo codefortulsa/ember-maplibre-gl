@@ -1,29 +1,29 @@
-# ember-mapbox-gl
+# ember-maplibre-gl
 
 [![Latest NPM release][npm-badge]][npm-badge-url]
 [![GitHub Actions Build Status][github-actions-badge]][github-actions-badge-url]
 [![Ember Observer Score][ember-observer-badge]][ember-observer-url]
 
-[npm-badge]: https://img.shields.io/npm/v/ember-mapbox-gl.svg
-[npm-badge-url]: https://www.npmjs.com/package/ember-mapbox-gl
-[github-actions-badge]: https://github.com/kturney/ember-mapbox-gl/workflows/CI/badge.svg
-[github-actions-badge-url]: https://github.com/kturney/ember-mapbox-gl/actions/workflows/ci.yml?query=branch%3Amaster
-[ember-observer-badge]: http://emberobserver.com/badges/ember-mapbox-gl.svg
-[ember-observer-url]: http://emberobserver.com/addons/ember-mapbox-gl
+[npm-badge]: https://img.shields.io/npm/v/ember-maplibre-gl.svg
+[npm-badge-url]: https://www.npmjs.com/package/ember-maplibre-gl
+[github-actions-badge]: https://github.com/kturney/ember-maplibre-gl/workflows/CI/badge.svg
+[github-actions-badge-url]: https://github.com/kturney/ember-maplibre-gl/actions/workflows/ci.yml?query=branch%3Amaster
+[ember-observer-badge]: http://emberobserver.com/badges/ember-maplibre-gl.svg
+[ember-observer-url]: http://emberobserver.com/addons/ember-maplibre-gl
 
-Ember integration with [mapbox-gl-js](https://www.mapbox.com/mapbox-gl-js/api/).
+Ember integration with [maplibre-gl-js](https://www.maplibre.com/maplibre-gl-js/api/).
 
 ## Installation
 
 ```sh
-ember install ember-mapbox-gl
+ember install ember-maplibre-gl
 ```
 
-Then, add your Mapbox access token to `config/environment.js`:
+Then, add your maplibre access token to `config/environment.js`:
 ```javascript
 module.exports = function(environment) {
   let ENV = {
-    'mapbox-gl': {
+    'maplibre-gl': {
       accessToken: 'ACCESS TOKEN HERE'
     },
 }
@@ -44,10 +44,10 @@ See the detailed [API Documentation](API.md).
 Add the following map options to `config/environment.js` to style the map, set a default zoom level, and to provide a default centerpoint:
 
 ```javascript
-'mapbox-gl': {
+'maplibre-gl': {
   accessToken: 'ACCESS TOKEN HERE',
   map: {
-    style: 'mapbox://styles/mapbox/basic-v9',
+    style: 'maplibre://styles/maplibre/basic-v9',
     zoom: 13,
     center: [ -96.7969879, 32.7766642 ]
   }
@@ -77,7 +77,7 @@ export default Controller.extend({
 ```
 
 ```handlebars
-{{#mapbox-gl class='map-container' initOptions=(hash pitch=30) as |map|}}
+{{#maplibre-gl class='map-container' initOptions=(hash pitch=30) as |map|}}
   {{map.on 'click' (action 'mapClicked')}}
 
   {{#map.source options=(hash type='geojson' data=marker) as |source|}}
@@ -85,7 +85,7 @@ export default Controller.extend({
       type='circle'
       paint=(hash circle-color='#007cbf' circle-radius=10))}}
   {{/map.source}}
-{{/mapbox-gl}}
+{{/maplibre-gl}}
 ```
 
 The above example does the following:

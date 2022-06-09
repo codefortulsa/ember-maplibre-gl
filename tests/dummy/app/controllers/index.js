@@ -26,7 +26,7 @@ export default Controller.extend({
   },
 
   _updateWanderDrone() {
-    this.notifyPropertyChange('wanderDrone'); // note that mapbox will reload the url everytime it is set as the data
+    this.notifyPropertyChange('wanderDrone'); // note that maplibre will reload the url everytime it is set as the data
     this.curRun = run.later(this, this._updateWanderDrone, 1000);
   },
 
